@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MarqueRoutingModule } from './marque-routing.module';
+import { PieceRoutingModule } from './piece-routing.module';
 import { HomeComponent } from './home/home.component';
-import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    EditComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
-    MarqueRoutingModule
+    PieceRoutingModule
   ]
 })
-export class MarqueModule { }
+export class PieceModule { }
