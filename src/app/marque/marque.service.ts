@@ -18,7 +18,7 @@ export class MarqueService {
    }
     
    update(payload:Marque){
-    return this.http.put(`http://localhost:8080/Marque/${payload.id}`,payload);
+    return this.http.put(`http://localhost:8080/Marque`,payload);
    }
    delete(id:number){
     return this.http.delete<Marque>(`http://localhost:8080/Marque/${id}`);

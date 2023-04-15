@@ -25,7 +25,7 @@ export class CreateComponent implements OnInit {
     this.ms.create(this.marqueForm)
     .subscribe({
       next:(data) => {
-        this.router.navigate(["/marque/home"])
+        this.router.navigate(["/Marque/home"])
       },
       error:(err) => {
         console.log(err);

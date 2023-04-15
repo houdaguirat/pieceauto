@@ -10,9 +10,14 @@ import { MarqueRoutingModule } from './marque/marque-routing.module';
 import { PieceRoutingModule } from './piece/piece-routing.module';
 import { TypeModule } from './type/type.module';
 import { PieceModule } from './piece/piece.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +25,10 @@ import { PieceModule } from './piece/piece.module';
     MarqueRoutingModule,
     HttpClientModule,
     TypeModule,
-    PieceModule
+    PieceModule,
+    MatToolbarModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

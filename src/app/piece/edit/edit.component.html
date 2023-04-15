@@ -5,25 +5,31 @@
 
         <div class="mb-3">
             <label for="txtID" class="form-label">ID</label>
-            <input type="number" name="ID" [(ngModel)] = "MarqueForm.ID" class="form-control" ID="txtID" />
+            <input type="number" name="ID" [(ngModel)] = "pieceForm.id" class="form-control" ID="txtID" />
         </div>
           
           
       <div class="mb-3">
         <label for="txtName" class="form-label">Name</label>
-        <input type="text" name="name" [(ngModel)] = "MarqueForm.name" class="form-control" price="txtName" />
+        <input type="text" name="name" [(ngModel)] = "pieceForm.name" class="form-control" price="txtName" />
       </div>
 
       <div class="mb-3">
         <label for="txtprice" class="form-label">price</label>
-        <input type="number" name="price" [(ngModel)] = "MarqueForm.price" class="form-control" price="txtprice" />
+        <input type="number" name="price" [(ngModel)] = "pieceForm.price" class="form-control" price="txtprice" />
     </div>
 
     <div class="mb-3">
         <label for="txtquantity" class="form-label">quantity</label>
-        <input type="number" name="quantity" [(ngModel)] = "MarqueForm.quantity" class="form-control" quantity="txtquantity" />
+        <input type="number" name="quantity" [(ngModel)] = "pieceForm.quantity" class="form-control" quantity="txtquantity" />
     </div>
       
+    <div class="mb-3">
+      <label for="txttype" class="form-label">Type</label>
+      <input type="text" name="type" [(ngModel)] = "pieceForm.type" class="form-control" id="txttype" />
+    </div>
+
+
       <button type="button" (click)="update()" class="btn btn-primary">Update</button>
     </form>
 </div>

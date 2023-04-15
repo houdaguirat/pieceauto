@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row mt-2">
         <div class="col col-md-4 offset-md-4">
-          <a class="btn btn-primary" routerLink="/client/create">Create</a>
+          <a class="btn btn-primary" routerLink="/Piece/create">Create</a>
         </div>
       </div>
     <table class="table">
@@ -12,19 +12,23 @@
           <th scope="col">Name</th>
           <th scope="col">price</th>
           <th scope="col">quantity</th>
+          <th scope="col">Type</th>
+          <th scope="col">Marque</th>
           <th scope="col"></th>
 
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of allClient">
+        <tr *ngFor="let item of allpiece">
           <th scope="row">{{ item.id }}</th>
           <td>{{ item.name }}</td>
           <td>{{ item.price }}</td>
           <td>{{ item.quantity }}</td>
+          <td>{{ item.type.name }}</td>
+          <td>{{ item.type.marque.name }}</td>
           <td>
             <button type="button" (click)="openDeleteModal(item.id)" class="btn btn-danger">Delete</button>
-            <!--a class="btn btn-primary" [routerLink]="['/client/edit/', item.id]">Edit</a-->
+            <a class="btn btn-primary" [routerLink]="['/Piece/edit/', item.id]">Edit</a>
           </td>
         </tr>
       </tbody>
