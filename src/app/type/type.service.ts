@@ -19,7 +19,7 @@ export class TypeService {
    }
     
    update(payload:Type){
-    return this.http.put(`http://localhost:8080/Type/${payload.id}`,payload);
+    return this.http.put(`http://localhost:8080/Type`,payload);
    }
    delete(id:number){
     return this.http.delete<Type>(`http://localhost:8080/Type/${id}`);

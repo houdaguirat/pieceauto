@@ -10,9 +10,14 @@
         <input type="text" name="annee" [(ngModel)] = "typeForm.annee" class="form-control" id="txtannee" />
       </div>
       <div class="mb-3">
-        <label for="txtmarque" class="form-label">marque</label>
-        <input type="text" name="marque" [(ngModel)] = "typeForm.marque" class="form-control" id="txtmarque" />
-      </div>
+        <label for="txtID" class="form-label">Marque</label>
+    
+    <select  type="number" name="id" [(ngModel)] = "typeForm.marque.id" class="form-control">
+      <option disabled>Select Marque</option>
+      <option *ngFor="let marque of allMarques" value ="{{marque.id}}">{{marque.name}}</option>
+
+  </select>
+</div>
       <button type="button" (click)="update()" class="btn btn-primary">Update</button>
     </form>
 </div>

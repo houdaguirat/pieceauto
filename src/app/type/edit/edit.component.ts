@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Type } from '../type';
 import { TypeService } from '../type.service';
+import { Marque } from 'src/app/marque/marque';
+import { MarqueService } from 'src/app/marque/marque.service';
 
 
 @Component({
@@ -11,6 +13,7 @@ import { TypeService } from '../type.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  allMarques: Marque[] = [];
   typeForm: Type = {
     id: 0,
     name: '',
@@ -24,13 +27,15 @@ export class EditComponent implements OnInit {
     constructor(
       private route: ActivatedRoute,
       private router:Router,
-      private tS: TypeService
+      private tS: TypeService,
+      private mS: MarqueService
     ) {}
    
     ngOnInit(): void {
       this.route.paramMap.subscribe((param) => {
         var id = Number(param.get('id'));
         this.getById(id);
+        this.getMarques();
       });
     }
    
@@ -38,6 +43,14 @@ export class EditComponent implements OnInit {
       this.tS.getById(id).subscribe((data) => {
         this.typeForm = data;
       });
+    }
+
+    getMarques(){
+      console.log("Get all marques ....");
+      this.mS.getAll().subscribe((data) => {
+        this.allMarques = data;
+        console.log("data=",data);
+      });      
     }
    
     update() {
