@@ -12,6 +12,8 @@ import { TypeModule } from './type/type.module';
 import { PieceModule } from './piece/piece.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     TypeModule,
     PieceModule,
+    MatToolbarModule,
+    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],

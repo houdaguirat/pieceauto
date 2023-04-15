@@ -28,7 +28,7 @@
           <td>{{ item.type.marque.name }}</td>
           <td>
             <button type="button" (click)="openDeleteModal(item.id)" class="btn btn-danger">Delete</button>
-            <!--a class="btn btn-primary" [routerLink]="['/Piece/edit/', item.id]">Edit</a-->
+            <a class="btn btn-primary" [routerLink]="['/Piece/edit/', item.id]">Edit</a>
           </td>
         </tr>
       </tbody>

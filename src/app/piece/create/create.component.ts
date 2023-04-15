@@ -51,7 +51,7 @@ export class CreateComponent implements OnInit {
     this.pS.create(this.pieceForm)
     .subscribe({
       next:() => {
-        this.router.navigate(["/piece/home"])
+        this.router.navigate(["/Piece/home"])
       },
       error:(err: any) => {
         console.log(err);

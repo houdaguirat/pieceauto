@@ -13,6 +13,17 @@
       <label for="txtmarque" class="form-label">Quantity</label>
       <input type="text" name="marque" [(ngModel)] = "pieceForm.quantity" class="form-control" id="txtmarque" />
     </div>
+
+    <div class="mb-3">
+      <label for="txtID" class="form-label">Type</label>
+  
+  <select  type="number" name="id" [(ngModel)] = "pieceForm.type.id" class="form-control">
+    <option disabled>Select Type</option>
+    <option *ngFor="let type of allTypes" value ="{{type.id}}">{{type.name}}</option>
+
+</select>
+</div>
+
     <button type="button" (click)="create()" class="btn btn-primary">Create</button>
   </form>
 </div>
