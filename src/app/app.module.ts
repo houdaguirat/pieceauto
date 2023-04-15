@@ -10,9 +10,11 @@ import { MarqueRoutingModule } from './marque/marque-routing.module';
 import { PieceRoutingModule } from './piece/piece-routing.module';
 import { TypeModule } from './type/type.module';
 import { PieceModule } from './piece/piece.module';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -3,15 +3,15 @@
     <form>
       <div class="mb-3">
         <label for="txtName" class="form-label">Name</label>
-        <input type="text" name="name" [(ngModel)] = "clientForm.name" class="form-control" id="txtName" />
+        <input type="text" name="name" [(ngModel)] = "typeForm.name" class="form-control" id="txtName" />
       </div>
       <div class="mb-3">
         <label for="txtannee" class="form-label">anneee</label>
-        <input type="text" name="annee" [(ngModel)] = "clientForm.annee" class="form-control" id="txtannee" />
+        <input type="text" name="annee" [(ngModel)] = "typeForm.annee" class="form-control" id="txtannee" />
       </div>
       <div class="mb-3">
         <label for="txtmarque" class="form-label">marque</label>
-        <input type="text" name="marque" [(ngModel)] = "clientForm.marque" class="form-control" id="txtmarque" />
+        <input type="text" name="marque" [(ngModel)] = "typeForm.marque" class="form-control" id="txtmarque" />
       </div>
       <button type="button" (click)="update()" class="btn btn-primary">Update</button>
     </form>

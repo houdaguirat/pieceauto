@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { pieceService } from '../piece.service';
-import { Piece, piece } from '../piece';
+import { Piece } from '../piece';
+import { PieceService } from '../piece.service';
+import { TypeService } from 'src/app/type/type.service';
+import { Type } from 'src/app/type/type';
+
 
  
 @Component({
@@ -10,20 +13,42 @@ import { Piece, piece } from '../piece';
   styleUrls: ['./create.component.css'],
 })
 export class CreateComponent implements OnInit {
+  allTypes: Type[] = [];
   pieceForm: Piece = {
     id: 0,
     name: '',
     price: 0,
-    quantity: 0
+    quantity: 0,
+    type:{
+      id: 0,
+      name: '',
+      annee:0,  
+      marque:{
+        id: 0,
+        name: '',
+        
+      }   
+    }
   };
  
-  constructor(private ms:pieceService,
+  constructor(private pS:PieceService,
+    private tS:TypeService,
     private router:Router) {}
  
-  ngOnInit(): void {}
+    ngOnInit(): void {
+      this.get();
+    }
+  
+    get() {
+      console.log("Get all marques ....");
+      this.tS.getAll().subscribe((data) => {
+        this.allTypes = data;
+        console.log("data=",data);
+      });
+    }  
  
   create(){
-    this.ms.create(this.pieceForm)
+    this.pS.create(this.pieceForm)
     .subscribe({
       next:() => {
         this.router.navigate(["/piece/home"])

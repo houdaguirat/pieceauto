@@ -5,6 +5,7 @@ import { MarqueRoutingModule } from './marque-routing.module';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CreateComponent } from './create/create.component';
   ],
   imports: [
     CommonModule,
-    MarqueRoutingModule
+    MarqueRoutingModule,
+    FormsModule
   ]
 })
 export class MarqueModule { }
