@@ -11,6 +11,7 @@ import { PieceRoutingModule } from './piece/piece-routing.module';
 import { TypeModule } from './type/type.module';
 import { PieceModule } from './piece/piece.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MarqueRoutingModule,
     HttpClientModule,
     TypeModule,
-    PieceModule
+    PieceModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
